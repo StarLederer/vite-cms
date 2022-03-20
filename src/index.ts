@@ -1,5 +1,5 @@
 import * as fs from "fs/promises";
-import { resolve } from "path";
+import * as path from "path";
 import type { Plugin } from 'vite';
 import { marked } from "marked";
 import type { BookConfig } from "./BookConfig";
@@ -27,7 +27,7 @@ function WebwriterCompiler(userOptiuons: UserOptions = {}): Plugin[] {
             if (typeof chapterPath === "string") {
               try {
                 // Read file at chapter path
-                const raw = await fs.readFile(resolve(chapterPath), 'utf-8')
+                const raw = await fs.readFile(path.resolve(chapterPath), 'utf-8')
                 // Parse and add chapter to book
                 book[chapterKey] = chapterPath.endsWith(".md") ? marked.parse(raw) : raw;
               } catch (err: any) {
@@ -38,10 +38,12 @@ function WebwriterCompiler(userOptiuons: UserOptions = {}): Plugin[] {
             }
           }
 
+          console.log(options.outDir);
+
           // Emit the book
           this.emitFile({
             type: 'asset',
-            fileName: `content/${bookConfig.name}.json`,
+            fileName: path.join(options.outDir, `${bookConfig.name}.json`),
             source: JSON.stringify(book),
           })
         };
