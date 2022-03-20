@@ -1,0 +1,1 @@
+# Webwriter Compiler Vite plugin
