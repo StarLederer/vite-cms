@@ -8,6 +8,7 @@ import { UserOptions, resolveOptions } from './Options';
 
 import dirToBook from "./dirToBook";
 import dirToLocalizedBooks from "./dirToLocalizedBooks";
+import recursiveDirToBooks from "./recursiveDirToBooks";
 
 function WebwriterCompiler(userOptiuons: UserOptions = {}): Plugin[] {
   const options = resolveOptions(userOptiuons);
@@ -37,8 +38,6 @@ function WebwriterCompiler(userOptiuons: UserOptions = {}): Plugin[] {
               this.error(`Non string path ${chapterPath} detected in book ${bookConfig.name}`)
             }
           }
-
-          console.log(options.outDir);
 
           // Emit the book
           this.emitFile({
@@ -81,5 +80,5 @@ function WebwriterCompiler(userOptiuons: UserOptions = {}): Plugin[] {
 }
 
 export default WebwriterCompiler;
-export { dirToBook, dirToLocalizedBooks };
+export { dirToBook, dirToLocalizedBooks, recursiveDirToBooks };
 export type { BookConfig }
