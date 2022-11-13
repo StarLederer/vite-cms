@@ -1,0 +1,1 @@
+There is no single correct way to implement Webwriter tools which makes is perfect for integration into frameworks such as SvelteKit or Nuxt, or use on it's own.

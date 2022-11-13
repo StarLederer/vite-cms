@@ -1,0 +1,1 @@
+Content writers are given just enough flexibility to keep their experience as simple as possible. Double-click content slices directly on the website to modify them using Markdown or plain text.

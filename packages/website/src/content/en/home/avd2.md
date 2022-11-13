@@ -1,0 +1,1 @@
+Content writers modify the source code of the website so it is possible to produce optimized code that is the same that would have been written if the website was completely static.

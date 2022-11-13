@@ -1,0 +1,117 @@
+@use "sass:math";
+@import "../../resources/all.scss";
+
+@mixin hover-before($idle, $focused) {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    width: calc(100% + ($idle * 2));
+    height: calc(100% + ($idle * 2));
+    position: absolute;
+    top: -$idle;
+    left: -$idle;
+  }
+
+  &:hover,
+  &:focus,
+  &.is-forced-focus {
+    &::before {
+      width: calc(100% + ($focused * 2));
+      height: calc(100% + ($focused * 2));
+      top: -$focused;
+      left: -$focused;
+    }
+  }
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  position: relative;
+
+  background: transparent;
+  color: $color-fg;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 800;
+  border-radius: 999999px;
+  text-decoration: none;
+  border: none;
+
+  display: block;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: $trans-s;
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  @include hover-before(0.5rem, 0rem);
+
+  &::before {
+    content: "";
+
+    border-radius: 999999px;
+    background: transparent;
+    opacity: 0;
+
+    display: block;
+    transition: $trans-s;
+    pointer-events: none;
+  }
+
+  &:hover,
+  &:focus,
+  &.is-forced-focus {
+    &::before {
+      background: mix($color-fg, transparent, 10%);
+      opacity: 1;
+    }
+  }
+
+  &.is-ghost {
+    $color-a-bright: mix($color-a, $color-fg, 60%);
+
+    background: mix($color-a-bright, transparent, 10%);
+    color: $color-a-bright;
+
+    &:hover,
+    &:focus,
+    &.is-forced-focus {
+      background: mix(mix($color-a, $color-fg, 80%), transparent, 10%);
+      color: mix($color-a, $color-fg, 40%);
+
+      &::before {
+        display: none;
+        // background: mix(mix(white, $color-a, 10%), transparent, 20%);
+      }
+    }
+  }
+
+  &.is-accent {
+    background: $color-a;
+    color: $color-a-fg;
+
+    &:hover,
+    &:focus,
+    &.is-forced-focus {
+      background: mix($color-a-h, $color-a, 20%);
+
+      &::before {
+        display: none;
+        // background: mix(mix(white, $color-a, 20%), transparent, 20%);
+      }
+    }
+  }
+
+  &.is-large {
+    padding: 0.8rem 1.4rem;
+    // @include hover-before(2rem, 0.5rem);
+  }
+}

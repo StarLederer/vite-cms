@@ -1,0 +1,56 @@
+@import "../resources/all.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background: mix($color-bg, $color-fg, 95%);
+  color: $color-fg;
+}
+
+.container {
+  @include container;
+}
+
+.no-render {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+// Margins
+
+// Typography
+
+@include font-sizes(1.6rem);
+
+// Btns
+button {
+  background: unset;
+  border: unset;
+  text-align: unset;
+  font-size: unset;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}

@@ -1,0 +1,44 @@
+@function lerp($a, $b, $t) {
+  @return $a + $t * ($b - $a);
+}
+
+$color-bg: #fff;
+$color-fg: #000;
+$color-a: rgb(240, 191, 57);
+$color-a-fg: #000;
+$color-a-h: #fff;
+
+$trans-s: 150ms;
+$trans-m: 300ms;
+$trans-l: 600ms;
+
+$breakpoint-s: 400px;
+$breakpoint-m: 800px;
+$breakpoint-l: 1200px;
+
+$max-width: 1200px;
+
+@mixin container {
+  width: 100%;
+  max-width: calc($max-width + 4rem);
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+@mixin font-sizes($h3) {
+  h3 {
+    font-size: $h3;
+  }
+
+  h4 {
+    font-size: lerp(1rem, $h3, 0.6);
+  }
+
+  h5 {
+    font-size: lerp(1rem, $h3, 0.4);
+  }
+
+  h6 {
+    font-size: lerp(1rem, $h3, 0.2);
+  }
+}

@@ -1,0 +1,1 @@
+Webwriter represents the middle ground between a drag-and-drop website builder and code, that idea carries over to all tools and frameworks. At the same time, some official implementations are available.
