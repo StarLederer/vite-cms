@@ -5,10 +5,10 @@
   "type": "module",
   "main": "./lib/plugin/index.js",
   "types": "./lib/plugin/types",
+  "files": ["lib", "components"],
   "svelte": "./components/index.js",
   "scripts": {
-    "prepack": "cp .gitignore .npmignore && cat .npmpack >> .npmignore",
-    "postpack": "rm .npmignore",
+    "prepack": "pnpm run build",
     "build": "rimraf lib && rollup -c rollup.config.js"
   },
   "repository": {

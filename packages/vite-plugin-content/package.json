@@ -5,9 +5,9 @@
   "type": "module",
   "main": "./lib/index.js",
   "types": "./lib/types",
+  "files": ["lib"],
   "scripts": {
-    "prepack": "cp .gitignore .npmignore && cat .npmpack >> .npmignore",
-    "postpack": "rm .npmignore",
+    "prepack": "pnpm run build",
     "build": "rimraf lib && rollup -c rollup.config.js"
   },
   "repository": {
