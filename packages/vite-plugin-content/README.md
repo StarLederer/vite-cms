@@ -1,4 +1,4 @@
-# vite-plugin-compiler
+# vite-plugin-content
 
 ***Status: Experimental***
 
