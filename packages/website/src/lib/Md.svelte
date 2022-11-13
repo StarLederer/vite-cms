@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Webwriter } from 'vite-plugin-content-editor-svelte/components';
+  import { Webwriter } from '@vite-cms/editor-svelte/components';
   import { i18n } from '../stores';
 
   let locale;

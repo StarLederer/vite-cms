@@ -1,7 +1,7 @@
 {
-  "name": "website",
+  "name": "@vite-cms/website",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0-beta",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,8 +14,8 @@
     "@tsconfig/svelte": "^2.0.1",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",
-    "vite-plugin-content": "link:../vite-plugin-content",
-    "vite-plugin-content-editor-svelte": "link:../vite-plugin-content-editor-svelte",
+    "@vite-cms/content": "link:../content",
+    "@vite-cms/editor-svelte": "link:../editor-svelte",
     "buffer": "^6.0.3",
     "eslint": "^8.12.0",
     "eslint-config-airbnb-typescript": "^16.2.0",

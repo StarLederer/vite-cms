@@ -1,4 +1,4 @@
-# vite-plugin-content
+# @vite-cms/content
 
 ***Status: Experimental***
 

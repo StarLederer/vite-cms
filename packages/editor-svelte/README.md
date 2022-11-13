@@ -1,4 +1,4 @@
-# vite-plugin-content-editor-svelte
+# @vite-cms/editor-svelte
 
 ***Status: Experimental***
 
