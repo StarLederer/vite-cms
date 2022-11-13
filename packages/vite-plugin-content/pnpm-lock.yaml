@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
   '@rollup/plugin-typescript': ^8.3.1
@@ -17,20 +17,20 @@ dependencies:
   marked: 4.0.12
 
 devDependencies:
-  '@rollup/plugin-typescript': 8.3.1_8fb0118e9d69f3600cbb8f144f7d456c
+  '@rollup/plugin-typescript': 8.3.1_r6ybddu5nhzwadf3r4ke67kfnq
   '@types/marked': 4.0.3
   rimraf: 3.0.2
   rollup: 2.70.1
   sass: 1.49.11
   svelte: 3.46.6
-  svelte-preprocess: 4.10.5_74824bfbfd6bb15e2381774a497bec25
+  svelte-preprocess: 4.10.5_osbex675noyv4i4bo5fes67meu
   tslib: 2.3.1
   typescript: 4.6.3
   vite: 2.9.1_sass@1.49.11
 
 packages:
 
-  /@rollup/plugin-typescript/8.3.1_8fb0118e9d69f3600cbb8f144f7d456c:
+  /@rollup/plugin-typescript/8.3.1_r6ybddu5nhzwadf3r4ke67kfnq:
     resolution: {integrity: sha512-84rExe3ICUBXzqNX48WZV2Jp3OddjTMX97O2Py6D1KJaGSwWp0mDHXj+bCGNJqWHIEKDIT2U0sDjhP4czKi6cA==}
     engines: {node: '>=8.0.0'}
     peerDependencies:
@@ -617,7 +617,7 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /svelte-preprocess/4.10.5_74824bfbfd6bb15e2381774a497bec25:
+  /svelte-preprocess/4.10.5_osbex675noyv4i4bo5fes67meu:
     resolution: {integrity: sha512-VKXPRScCzAZqeBZOGq4LLwtNrAu++mVn7XvQox3eFDV7Ciq0Lg70Q8QWjH9iXF7J+pMlXhPsSFwpCb2E+hoeyA==}
     engines: {node: '>= 9.11.2'}
     requiresBuild: true
