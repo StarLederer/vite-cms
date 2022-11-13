@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { loadHtml } from '@webwriter/vite-plugin-svelte/lib/runtime';
+  import { loadHtml } from 'vite-plugin-content-editor-svelte/lib/runtime';
 
   import { i18n } from './stores';
   import Md from './lib/Md.svelte';
